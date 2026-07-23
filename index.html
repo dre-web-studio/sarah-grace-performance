@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sarah Grace Performance | Stilt Walking & Fire Artistry</title>
-  <meta name="description" content="Nashville-based stilt walking and fire artistry for corporate events, luxury celebrations, brand activations, festivals, and private parties." />
+  <!--
+    SARAH GRACE PERFORMANCE — SEO-UPDATED LANDING PAGE
+    How to use:
+    1) Rename this file to index.html
+    2) Upload/replace the current index.html in the GitHub repo
+    3) Later, upload photos into an images/ folder and replace the placeholder blocks
+  -->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nashville Stilt Walker, Fire Performer & LED Artist | Sarah Grace Performance</title>
+  <meta name="description" content="Sarah Grace Performance is a Nashville-based stilt walker, fire performer, and LED artist available for corporate events, galas, brand activations, festivals, weddings, private parties, and luxury celebrations.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sarahgraceperformance.com/">
+
+  <!-- Social preview -->
+  <meta property="og:title" content="Nashville Stilt Walker, Fire Performer & LED Artist | Sarah Grace Performance">
+  <meta property="og:description" content="High-impact stilt walking, fire, and LED performance for Nashville events that need atmosphere, movement, and unforgettable visual presence.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sarahgraceperformance.com/">
+  <!-- Later, when you upload a strong horizontal image, uncomment and edit this:
+  <meta property="og:image" content="https://sarahgraceperformance.com/images/sarah-grace-performance-nashville.jpg">
+  -->
+
   <style>
-    /*
-      QUICK EDIT GUIDE
-      - Change colors in :root
-      - Update text inside the HTML sections
-      - Replace email in the CTA links: sarah@radiantway.co
-      - Replace image placeholders later with real photos if desired
-    */
-
     :root {
-      --ink: #0e0b09;
-      --charcoal: #17110f;
-      --cream: #f7efe3;
-      --soft: #d9c3aa;
-      --ember: #d96b38;
-      --rose: #c99786;
-      --gold: #d8b56f;
-      --line: rgba(247, 239, 227, 0.18);
-      --shadow: rgba(0, 0, 0, 0.35);
+      --black: #0e0d0c;
+      --charcoal: #191715;
+      --brown: #322821;
+      --cream: #f8f2e8;
+      --warm: #efe1ce;
+      --gold: #d8aa59;
+      --gold-soft: #f3d79b;
+      --rose: #b96c68;
+      --smoke: #d8d0c3;
+      --muted: #8f8174;
+      --line: rgba(216, 170, 89, .32);
+      --shadow: 0 24px 80px rgba(0, 0, 0, .28);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     html {
       scroll-behavior: smooth;
@@ -36,37 +49,13 @@
 
     body {
       margin: 0;
-      background: var(--ink);
-      color: var(--cream);
-      font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.5;
-      overflow-x: hidden;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:
-        radial-gradient(circle at 18% 12%, rgba(217, 107, 56, 0.20), transparent 26rem),
-        radial-gradient(circle at 78% 18%, rgba(216, 181, 111, 0.13), transparent 24rem),
-        linear-gradient(115deg, rgba(255,255,255,0.035), transparent 35%, rgba(255,255,255,0.02));
-      z-index: -2;
-    }
-
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      opacity: 0.18;
-      background-image:
-        linear-gradient(rgba(247, 239, 227, 0.06) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(247, 239, 227, 0.05) 1px, transparent 1px);
-      background-size: 72px 72px;
-      mask-image: linear-gradient(to bottom, black, transparent 78%);
-      z-index: -1;
+        radial-gradient(circle at top left, rgba(216, 170, 89, .18), transparent 32rem),
+        radial-gradient(circle at 80% 10%, rgba(185, 108, 104, .18), transparent 28rem),
+        linear-gradient(180deg, #12100f 0%, #191512 38%, #f8f2e8 38%, #f8f2e8 100%);
+      color: var(--cream);
+      line-height: 1.55;
     }
 
     a {
@@ -74,632 +63,890 @@
       text-decoration: none;
     }
 
+    img {
+      width: 100%;
+      display: block;
+      border-radius: 24px;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
     .nav {
-      position: fixed;
+      position: sticky;
       top: 0;
-      left: 0;
-      right: 0;
       z-index: 10;
+      backdrop-filter: blur(16px);
+      background: rgba(18, 16, 15, .76);
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    .nav-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 22px clamp(20px, 4vw, 56px);
-      color: var(--cream);
-      mix-blend-mode: normal;
+      gap: 18px;
+      padding: 16px 0;
     }
 
     .brand {
-      letter-spacing: 0.18em;
+      font-family: Georgia, "Times New Roman", serif;
+      letter-spacing: .05em;
       text-transform: uppercase;
-      font-size: 0.78rem;
-      font-family: Arial, sans-serif;
+      font-size: .92rem;
+      color: var(--gold-soft);
     }
 
     .nav-links {
       display: flex;
-      gap: 22px;
       align-items: center;
-      font-family: Arial, sans-serif;
-      font-size: 0.78rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .nav-links a {
-      opacity: 0.78;
-      transition: opacity 180ms ease, color 180ms ease;
+      gap: 18px;
+      font-size: .86rem;
+      color: rgba(248, 242, 232, .82);
     }
 
     .nav-links a:hover {
-      opacity: 1;
-      color: var(--gold);
+      color: var(--gold-soft);
     }
 
     .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      gap: 8px;
       min-height: 46px;
-      padding: 0 20px;
-      border: 1px solid rgba(247, 239, 227, 0.42);
+      padding: 13px 20px;
       border-radius: 999px;
-      font-family: Arial, sans-serif;
-      font-size: 0.74rem;
-      letter-spacing: 0.12em;
+      background: var(--gold);
+      color: #17120e;
+      font-weight: 800;
+      letter-spacing: .03em;
       text-transform: uppercase;
-      transition: transform 180ms ease, background 180ms ease, color 180ms ease, border-color 180ms ease;
+      font-size: .78rem;
+      box-shadow: 0 14px 36px rgba(216, 170, 89, .28);
+      border: 1px solid rgba(255, 255, 255, .16);
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
     }
 
     .button:hover {
-      transform: translateY(-2px);
-      background: var(--cream);
-      color: var(--ink);
-      border-color: var(--cream);
+      transform: translateY(-1px);
+      background: var(--gold-soft);
+      box-shadow: 0 18px 42px rgba(216, 170, 89, .34);
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--cream);
+      border: 1px solid var(--line);
+      box-shadow: none;
+    }
+
+    .button.secondary:hover {
+      background: rgba(216, 170, 89, .12);
+      color: var(--gold-soft);
     }
 
     .hero {
-      min-height: 100svh;
-      position: relative;
+      padding: 76px 0 64px;
+    }
+
+    .hero-grid {
       display: grid;
-      align-items: end;
-      padding: 120px clamp(20px, 5vw, 72px) 54px;
-      overflow: hidden;
-      isolation: isolate;
-    }
-
-    .hero-art {
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      background:
-        linear-gradient(90deg, rgba(14, 11, 9, 0.93) 0%, rgba(14, 11, 9, 0.62) 42%, rgba(14, 11, 9, 0.82) 100%),
-        radial-gradient(circle at 70% 44%, rgba(217, 107, 56, 0.42), transparent 18rem),
-        radial-gradient(circle at 74% 35%, rgba(216, 181, 111, 0.28), transparent 12rem),
-        linear-gradient(135deg, #231512, #0e0b09 58%, #2d1710);
-    }
-
-    .hero-art::before {
-      content: "";
-      position: absolute;
-      width: min(58vw, 680px);
-      aspect-ratio: 1 / 1.28;
-      right: 5vw;
-      bottom: 4vh;
-      border-radius: 48% 48% 10% 10% / 36% 36% 8% 8%;
-      background:
-        radial-gradient(circle at 50% 18%, rgba(247, 239, 227, 0.95) 0 3.5%, transparent 3.7%),
-        linear-gradient(90deg, transparent 46%, rgba(247, 239, 227, 0.55) 46% 48%, transparent 48% 52%, rgba(247, 239, 227, 0.42) 52% 54%, transparent 54%),
-        radial-gradient(circle at 52% 58%, rgba(217, 107, 56, 0.50), transparent 23%),
-        linear-gradient(120deg, rgba(247, 239, 227, 0.03), rgba(247, 239, 227, 0.12), rgba(247, 239, 227, 0.03));
-      border: 1px solid rgba(247, 239, 227, 0.16);
-      box-shadow: 0 60px 140px var(--shadow);
-      opacity: 0.9;
-      transform: rotate(-3deg);
-    }
-
-    .hero-art::after {
-      content: "";
-      position: absolute;
-      width: 44vw;
-      max-width: 520px;
-      min-width: 240px;
-      aspect-ratio: 1 / 1;
-      right: 13vw;
-      top: 17vh;
-      border-radius: 50%;
-      background:
-        radial-gradient(circle, transparent 0 40%, rgba(217, 107, 56, 0.85) 41% 43%, transparent 44% 50%, rgba(216, 181, 111, 0.65) 51% 53%, transparent 54%),
-        conic-gradient(from 30deg, transparent, rgba(217, 107, 56, 0.5), transparent, rgba(216, 181, 111, 0.45), transparent);
-      filter: blur(0.2px);
-      opacity: 0.85;
-      animation: slowTurn 22s linear infinite;
-    }
-
-    @keyframes slowTurn {
-      to { transform: rotate(360deg); }
-    }
-
-    .hero-copy {
-      max-width: 760px;
-      animation: rise 900ms cubic-bezier(.2,.8,.2,1) both;
-    }
-
-    @keyframes rise {
-      from { opacity: 0; transform: translateY(24px); }
-      to { opacity: 1; transform: translateY(0); }
+      grid-template-columns: 1.04fr .96fr;
+      gap: 42px;
+      align-items: center;
     }
 
     .eyebrow {
-      font-family: Arial, sans-serif;
-      letter-spacing: 0.18em;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold-soft);
       text-transform: uppercase;
-      color: var(--gold);
-      font-size: 0.78rem;
-      margin-bottom: 20px;
+      letter-spacing: .16em;
+      font-weight: 800;
+      font-size: .72rem;
+      margin-bottom: 18px;
     }
 
-    h1, h2, h3, p {
-      margin-top: 0;
+    .eyebrow:before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: var(--gold);
+      display: inline-block;
+    }
+
+    h1, h2, h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      margin: 0;
+      line-height: 1.04;
+      font-weight: 500;
     }
 
     h1 {
-      font-size: clamp(4.2rem, 12vw, 11.5rem);
-      line-height: 0.82;
-      letter-spacing: -0.085em;
-      margin-bottom: 28px;
-      font-weight: 400;
-      max-width: 7.6ch;
+      font-size: clamp(3.1rem, 7vw, 6.4rem);
+      letter-spacing: -.055em;
+      max-width: 980px;
     }
 
-    .hero-copy p {
-      font-size: clamp(1.08rem, 1.8vw, 1.48rem);
-      max-width: 620px;
-      color: rgba(247, 239, 227, 0.78);
-      margin-bottom: 30px;
+    h2 {
+      font-size: clamp(2rem, 3.6vw, 3.25rem);
+      letter-spacing: -.04em;
+      color: var(--brown);
+    }
+
+    h3 {
+      font-size: 1.55rem;
+      letter-spacing: -.025em;
+    }
+
+    .hero-copy {
+      color: rgba(248, 242, 232, .78);
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      max-width: 680px;
+      margin: 22px 0 0;
     }
 
     .hero-actions {
       display: flex;
-      gap: 14px;
-      align-items: center;
       flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .hero-card {
+      position: relative;
+      min-height: 640px;
+      border-radius: 34px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, .12);
+      box-shadow: var(--shadow);
+      background:
+        linear-gradient(135deg, rgba(216, 170, 89, .24), rgba(185, 108, 104, .12)),
+        radial-gradient(circle at 35% 20%, rgba(255,255,255,.22), transparent 10rem),
+        linear-gradient(180deg, #322821, #0e0d0c);
+    }
+
+    .photo-placeholder {
+      height: 100%;
+      min-height: 420px;
+      display: grid;
+      place-items: center;
+      padding: 34px;
+      text-align: center;
+      color: rgba(248, 242, 232, .78);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .photo-placeholder:before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(216, 170, 89, .38);
+      border-radius: 26px;
+    }
+
+    .photo-placeholder:after {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      border-radius: 999px;
+      background: rgba(216, 170, 89, .18);
+      filter: blur(22px);
+      bottom: -110px;
+      right: -90px;
+    }
+
+    .placeholder-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 340px;
+    }
+
+    .placeholder-kicker {
+      color: var(--gold-soft);
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-weight: 800;
+      font-size: .72rem;
+      margin-bottom: 14px;
+    }
+
+    .placeholder-title {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2.2rem;
+      line-height: 1.05;
+      color: var(--cream);
+      margin-bottom: 12px;
+    }
+
+    .quick-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 34px;
+      color: rgba(248, 242, 232, .74);
+      font-size: .86rem;
+    }
+
+    .quick-tags span {
+      border: 1px solid rgba(216, 170, 89, .28);
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: rgba(255,255,255,.04);
+    }
+
+    section.light {
+      background: var(--cream);
+      color: var(--brown);
     }
 
     .section {
-      padding: clamp(72px, 10vw, 150px) clamp(20px, 5vw, 72px);
-      border-top: 1px solid var(--line);
+      padding: 68px 0;
     }
 
-    .section-label {
-      font-family: Arial, sans-serif;
-      color: var(--rose);
+    .section.compact {
+      padding: 42px 0 50px;
+    }
+
+    .section-intro {
+      display: block;
+      margin-bottom: 42px;
+    }
+
+    .section-intro h2 {
+      max-width: 940px;
+    }
+
+    .section-intro p {
+      margin: 18px 0 0;
+      color: #5f5148;
+      font-size: 1.04rem;
+      line-height: 1.65;
+      max-width: 820px;
+    }
+
+    .kicker-dark {
+      color: #9c7438;
       text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-size: 0.76rem;
-      margin-bottom: 18px;
+      letter-spacing: .16em;
+      font-weight: 900;
+      font-size: .72rem;
+      margin-bottom: 12px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: #fffaf2;
+      border: 1px solid rgba(50, 40, 33, .1);
+      border-radius: 28px;
+      padding: 26px;
+      box-shadow: 0 20px 52px rgba(50, 40, 33, .06);
+    }
+
+    .card h3 {
+      color: var(--brown);
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      margin: 0;
+      color: #62564d;
+    }
+
+    .card .mini {
+      color: #9c7438;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: .68rem;
+      font-weight: 900;
+      margin-bottom: 12px;
     }
 
     .split {
       display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
-      gap: clamp(36px, 8vw, 110px);
-      align-items: start;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      align-items: stretch;
     }
 
-    h2 {
-      font-size: clamp(2.6rem, 6.2vw, 6.4rem);
-      line-height: 0.94;
-      letter-spacing: -0.055em;
-      font-weight: 400;
-      margin-bottom: 0;
+    .dark-panel {
+      background:
+        radial-gradient(circle at 80% 20%, rgba(216, 170, 89, .18), transparent 18rem),
+        linear-gradient(160deg, #221b17, #0f0d0c);
+      color: var(--cream);
+      border-radius: 34px;
+      padding: 36px;
+      min-height: 430px;
+      border: 1px solid rgba(216, 170, 89, .2);
+      box-shadow: var(--shadow);
     }
 
-    .lead {
-      font-size: clamp(1.08rem, 2vw, 1.55rem);
-      color: rgba(247, 239, 227, 0.76);
-      max-width: 720px;
+    .dark-panel h2,
+    .dark-panel h3 {
+      color: var(--cream);
     }
 
-    .services {
+    .dark-panel p {
+      color: rgba(248, 242, 232, .76);
+    }
+
+    .list-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--line);
-      margin-top: 44px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 22px;
     }
 
-    .service {
-      background: rgba(14, 11, 9, 0.82);
-      padding: clamp(24px, 4vw, 44px);
-      min-height: 310px;
+    .list-grid div {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 18px;
+      padding: 12px 14px;
+      color: rgba(248, 242, 232, .82);
+    }
+
+    .location-band {
+      background: #fffaf2;
+      border-radius: 34px;
+      border: 1px solid rgba(50, 40, 33, .1);
+      padding: 38px;
+      display: block;
+    }
+
+    .location-band h2 {
+      max-width: 980px;
+    }
+
+    .location-pills {
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: background 200ms ease, transform 200ms ease;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+      max-width: 980px;
     }
 
-    .service:hover {
-      background: rgba(217, 107, 56, 0.13);
-      transform: translateY(-4px);
-    }
-
-    .service-number {
-      font-family: Arial, sans-serif;
-      color: var(--gold);
-      font-size: 0.78rem;
-      letter-spacing: 0.12em;
-    }
-
-    h3 {
-      font-size: clamp(1.7rem, 3.3vw, 3.3rem);
-      line-height: 1;
-      font-weight: 400;
-      letter-spacing: -0.045em;
-      margin-bottom: 18px;
-    }
-
-    .service p, .event-list p, .about p, .quote p {
-      color: rgba(247, 239, 227, 0.70);
-      font-size: 1rem;
+    .location-pills span {
+      border: 1px solid rgba(50, 40, 33, .12);
+      color: #5f5148;
+      border-radius: 999px;
+      padding: 9px 13px;
+      background: #fff;
+      font-size: .92rem;
     }
 
     .gallery {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
+      grid-template-columns: 1.1fr .9fr;
       gap: 18px;
-      margin-top: 44px;
     }
 
-    .photo {
-      min-height: 520px;
-      border: 1px solid rgba(247, 239, 227, 0.16);
-      position: relative;
-      overflow: hidden;
+    .gallery .photo-placeholder {
+      border-radius: 28px;
+      min-height: 320px;
       background:
-        radial-gradient(circle at 65% 35%, rgba(217, 107, 56, 0.48), transparent 22%),
-        linear-gradient(135deg, rgba(247, 239, 227, 0.12), rgba(14, 11, 9, 0.12)),
-        #211410;
+        radial-gradient(circle at 35% 30%, rgba(216, 170, 89, .24), transparent 12rem),
+        linear-gradient(160deg, #3a2d25, #181411);
     }
 
-    .photo.small {
-      min-height: 251px;
-      margin-bottom: 18px;
-    }
-
-    .photo::before {
-      content: "";
-      position: absolute;
-      inset: 12%;
-      border: 1px solid rgba(247, 239, 227, 0.24);
-      border-radius: 50% 50% 4% 4%;
-      transform: rotate(-6deg);
-    }
-
-    .photo::after {
-      content: attr(data-caption);
-      position: absolute;
-      left: 22px;
-      bottom: 20px;
-      right: 22px;
-      font-family: Arial, sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-size: 0.72rem;
-      color: rgba(247, 239, 227, 0.68);
-    }
-
-    .about {
+    .gallery-stack {
       display: grid;
-      grid-template-columns: minmax(280px, 0.8fr) 1.2fr;
-      gap: clamp(32px, 7vw, 88px);
-      align-items: center;
+      gap: 18px;
     }
 
-    .portrait {
-      aspect-ratio: 4 / 5;
-      border: 1px solid rgba(247, 239, 227, 0.16);
-      background:
-        linear-gradient(180deg, transparent, rgba(14, 11, 9, 0.76)),
-        radial-gradient(circle at 50% 30%, rgba(247, 239, 227, 0.23), transparent 18%),
-        linear-gradient(135deg, rgba(201, 151, 134, 0.28), rgba(217, 107, 56, 0.12), rgba(14, 11, 9, 0.18));
-      position: relative;
-      overflow: hidden;
-    }
-
-    .portrait::after {
-      content: "Photo placeholder";
-      position: absolute;
-      left: 22px;
-      bottom: 20px;
-      font-family: Arial, sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: rgba(247, 239, 227, 0.62);
-      font-size: 0.72rem;
-    }
-
-    .event-list {
+    .faq {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1px;
-      background: var(--line);
-      margin-top: 44px;
+      gap: 14px;
     }
 
-    .event-item {
-      background: rgba(14, 11, 9, 0.86);
-      padding: 28px;
-      min-height: 180px;
+    details {
+      background: #fffaf2;
+      border: 1px solid rgba(50, 40, 33, .1);
+      border-radius: 22px;
+      padding: 18px 20px;
     }
 
-    .event-item span {
-      display: inline-block;
-      color: var(--gold);
-      font-family: Arial, sans-serif;
-      font-size: 0.72rem;
-      letter-spacing: 0.12em;
-      margin-bottom: 18px;
+    summary {
+      cursor: pointer;
+      font-weight: 900;
+      color: var(--brown);
+      font-size: 1.03rem;
     }
 
-    .quote {
-      max-width: 980px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .quote blockquote {
-      margin: 0 0 26px;
-      font-size: clamp(2rem, 4.4vw, 5.4rem);
-      line-height: 1;
-      letter-spacing: -0.055em;
+    details p {
+      color: #62564d;
+      margin: 12px 0 0;
     }
 
     .cta {
-      min-height: 78vh;
-      display: grid;
-      place-items: center;
       text-align: center;
+      padding: 86px 0;
       background:
-        radial-gradient(circle at 50% 38%, rgba(217, 107, 56, 0.26), transparent 20rem),
-        linear-gradient(180deg, rgba(14, 11, 9, 0.1), rgba(14, 11, 9, 0.8));
+        radial-gradient(circle at 50% 0%, rgba(216, 170, 89, .24), transparent 30rem),
+        linear-gradient(180deg, #1b1613, #0e0d0c);
+      color: var(--cream);
     }
 
     .cta h2 {
-      max-width: 900px;
-      margin: 0 auto 26px;
+      color: var(--cream);
+      max-width: 820px;
+      margin: 0 auto;
     }
 
     .cta p {
-      max-width: 590px;
-      margin: 0 auto 30px;
-      color: rgba(247, 239, 227, 0.74);
-      font-size: 1.16rem;
+      max-width: 680px;
+      margin: 18px auto 0;
+      color: rgba(248, 242, 232, .75);
+      font-size: 1.08rem;
     }
 
-    .footer {
+    footer {
+      background: #0e0d0c;
+      border-top: 1px solid rgba(255,255,255,.08);
+      color: rgba(248, 242, 232, .58);
+      padding: 28px 0;
+      font-size: .9rem;
+    }
+
+    .footer-inner {
       display: flex;
       justify-content: space-between;
       gap: 20px;
       flex-wrap: wrap;
-      padding: 28px clamp(20px, 5vw, 72px);
-      border-top: 1px solid var(--line);
-      color: rgba(247, 239, 227, 0.56);
-      font-family: Arial, sans-serif;
-      font-size: 0.78rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
     }
 
-    .reveal {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 700ms ease, transform 700ms ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
+    .edit-note {
+      margin-top: 16px;
+      font-size: .84rem;
+      color: rgba(248, 242, 232, .58);
     }
 
     @media (max-width: 900px) {
-      .nav {
-        position: absolute;
-        align-items: flex-start;
+      .hero {
+        padding: 54px 0 44px;
+      }
+
+      .hero-grid,
+      .split,
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        min-height: 460px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
       }
 
       .nav-links {
         display: none;
       }
-
-      .hero {
-        min-height: 92svh;
-      }
-
-      .hero-art::before {
-        width: 72vw;
-        right: -10vw;
-        opacity: 0.45;
-      }
-
-      .hero-art::after {
-        right: -2vw;
-        top: 16vh;
-        opacity: 0.55;
-      }
-
-      .split, .about {
-        grid-template-columns: 1fr;
-      }
-
-      .services, .event-list, .gallery {
-        grid-template-columns: 1fr;
-      }
-
-      .photo, .photo.small {
-        min-height: 340px;
-        margin-bottom: 0;
-      }
     }
 
     @media (max-width: 560px) {
-      .hero {
-        padding-top: 96px;
+      .container {
+        width: min(100% - 28px, 1120px);
       }
 
       h1 {
-        font-size: clamp(4rem, 22vw, 6.2rem);
+        font-size: clamp(2.7rem, 16vw, 4rem);
+      }
+
+      h2 {
+        font-size: 2.15rem;
+      }
+
+      .section {
+        padding: 52px 0;
+      }
+
+      .section.compact {
+        padding: 34px 0 42px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
       }
 
       .button {
         width: 100%;
       }
 
-      .section {
-        padding-top: 64px;
-        padding-bottom: 64px;
+      .list-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .dark-panel,
+      .location-band,
+      .card {
+        padding: 24px;
       }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EntertainmentBusiness",
+    "name": "Sarah Grace Performance",
+    "url": "https://sarahgraceperformance.com/",
+    "description": "Nashville-based stilt walking, fire performance, LED artistry, roaming entertainment, and custom visual performance for corporate events, brand activations, festivals, weddings, private parties, galas, and luxury celebrations.",
+    "areaServed": [
+      "Nashville, TN",
+      "Middle Tennessee",
+      "Franklin, TN",
+      "Brentwood, TN",
+      "Murfreesboro, TN"
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Sarah Grace",
+      "jobTitle": "Stilt Walker, Fire Performer, and LED Artist"
+    },
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Stilt walking for Nashville events"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Fire performance for events"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "LED performance for corporate events and private parties"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
+
 <body>
-  <header class="nav">
-    <a class="brand" href="#top">Sarah Grace Performance</a>
-    <nav class="nav-links" aria-label="Main navigation">
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#about">About</a>
-      <a href="#inquire">Inquire</a>
-    </nav>
-  </header>
+  <nav class="nav" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">Sarah Grace Performance</a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#events">Events</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#faq">FAQ</a>
+        <a class="button" href="#book">Book Sarah</a>
+      </div>
+    </div>
+  </nav>
 
   <main id="top">
-    <section class="hero" aria-label="Sarah Grace Performance">
-      <div class="hero-art" aria-hidden="true"></div>
-      <div class="hero-copy">
-        <div class="eyebrow">Stilt walking · Fire artistry · Nashville</div>
-        <h1>Presence in motion.</h1>
-        <p>Immersive stilt and fire performance for events that need a striking visual centerpiece, elegant guest interaction, and a moment people remember.</p>
-        <div class="hero-actions">
-          <a class="button" href="mailto:sarah@radiantway.co?subject=Performance%20Inquiry">Request a quote</a>
-          <a class="button" href="#portfolio">View the work</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section reveal" id="services">
-      <div class="split">
+    <header class="hero">
+      <div class="container hero-grid">
         <div>
-          <div class="section-label">Services</div>
-          <h2>Performance shaped to the room.</h2>
-        </div>
-        <p class="lead">From elevated ambience to full focal-point spectacle, each booking is designed around the venue, guest flow, safety needs, and atmosphere of the event.</p>
-      </div>
+          <div class="eyebrow">Nashville specialty performance</div>
+          <h1>Nashville Stilt Walker, Fire Performer &amp; LED Artist</h1>
+          <p class="hero-copy">
+            Sarah Grace Performance provides stilt walking, fire performance, LED artistry, roaming entertainment, and custom visual acts for corporate events, brand activations, galas, festivals, weddings, private parties, and luxury celebrations in Nashville and beyond.
+          </p>
 
-      <div class="services">
-        <article class="service">
-          <div class="service-number">01</div>
-          <div>
-            <h3>Stilt walking</h3>
-            <p>High-impact roaming performance for entrances, galas, grand openings, photo moments, and guest interaction.</p>
+          <div class="quick-tags" aria-label="Popular booking categories">
+            <span>Corporate events</span>
+            <span>Brand activations</span>
+            <span>Festivals</span>
+            <span>Weddings</span>
+            <span>Private parties</span>
           </div>
-        </article>
-        <article class="service">
-          <div class="service-number">02</div>
-          <div>
-            <h3>Fire artistry</h3>
-            <p>Elegant fire fans, poi, and choreographed moments for outdoor events, evening receptions, and dramatic reveals.</p>
+
+          <div class="hero-actions">
+            <!-- EDIT THIS EMAIL LINK when Sarah confirms her preferred booking email -->
+            <a class="button" href="mailto:hello@sarahgraceperformance.com?subject=Booking%20Inquiry%20for%20Sarah%20Grace%20Performance">Book Sarah Grace</a>
+            <a class="button secondary" href="#services">Explore Services</a>
           </div>
-        </article>
-        <article class="service">
-          <div class="service-number">03</div>
-          <div>
-            <h3>Custom concepts</h3>
-            <p>Costuming, music, pacing, and performance style coordinated for brand activations, private celebrations, and themed productions.</p>
+          <p class="edit-note">Available for Nashville, Middle Tennessee, and travel-based event bookings.</p>
+        </div>
+
+        <div class="hero-card" aria-label="Featured Sarah Grace Performance image placeholder">
+          <!-- PHOTO TODO:
+            When Sarah gives you a hero photo, replace this whole .photo-placeholder div with:
+            <img src="images/sarah-grace-stilt-walker-nashville.jpg" alt="Sarah Grace performing as a stilt walker at a Nashville event">
+          -->
+          <div class="photo-placeholder">
+            <div class="placeholder-inner">
+              <div class="placeholder-kicker">Featured image</div>
+              <div class="placeholder-title">Stilts, fire &amp; LED</div>
+              <p>A featured Sarah Grace Performance image can live here once final photos are selected.</p>
+            </div>
           </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section reveal" id="portfolio">
-      <div class="split">
-        <div>
-          <div class="section-label">Portfolio</div>
-          <h2>Visual atmosphere, made live.</h2>
-        </div>
-        <p class="lead">Replace these placeholders with Sarah’s real performance photos once she has access to her preferred images.</p>
-      </div>
-
-      <div class="gallery" aria-label="Gallery placeholders">
-        <div class="photo" data-caption="Stilt performance · Corporate event"></div>
-        <div>
-          <div class="photo small" data-caption="Fire artistry · Outdoor reception"></div>
-          <div class="photo small" data-caption="Costumed roaming · Private celebration"></div>
         </div>
       </div>
-    </section>
+    </header>
 
-    <section class="section reveal" id="about">
-      <div class="about">
-        <div class="portrait"></div>
-        <div>
-          <div class="section-label">The artist</div>
-          <h2>Meet Sarah Grace.</h2>
-          <p class="lead">Sarah Grace is a Nashville-based movement artist specializing in stilt walking, fire performance, and immersive event presence.</p>
-          <p>Her work is built for rooms where atmosphere matters: luxury celebrations, corporate productions, music industry events, private parties, and brand moments that need more than ordinary entertainment.</p>
-          <p>Every appearance can be tailored around costuming, guest interaction, event timing, venue layout, and the mood you want guests to feel the second they arrive.</p>
+    <section class="light section" id="intro">
+      <div class="container split">
+        <div class="dark-panel">
+          <div class="eyebrow">Direct booking</div>
+          <h2>Book a Nashville specialty performer directly.</h2>
+          <p>
+            Sarah Grace is a Nashville-based stilt walker and multi-prop fire and LED performer. Instead of booking through a large entertainment roster, clients work directly with Sarah to shape the performance around the event theme, venue, audience, timing, and guest experience.
+          </p>
+          <p>
+            High-impact stilt walking, fire, and LED performance for Nashville events that need atmosphere, movement, and unforgettable visual presence.
+          </p>
+        </div>
+
+        <div class="dark-panel">
+          <div class="eyebrow">Performance style</div>
+          <h2>More than background entertainment.</h2>
+          <p>
+            Sarah’s work is designed for events that need a memorable visual anchor: a dramatic entrance, a roaming photo moment, an immersive atmosphere, or a feature performance that gives guests something to talk about.
+          </p>
+          <div class="list-grid" aria-label="Sarah Grace Performance strengths">
+            <div>Stilt walking</div>
+            <div>Fire performance</div>
+            <div>LED artistry</div>
+            <div>Roaming entertainment</div>
+            <div>Themed costuming</div>
+            <div>Event atmosphere</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section reveal">
-      <div class="split">
-        <div>
-          <div class="section-label">Where it works</div>
-          <h2>Designed for memorable rooms.</h2>
+    <section class="light section" id="services">
+      <div class="container">
+        <div class="section-intro">
+          <div>
+            <div class="kicker-dark">What Sarah offers</div>
+            <h2>Specialty performance for Nashville events.</h2>
+          </div>
+          <p>
+            Choose one performance style or combine services for a custom event experience. Acts can be designed as ambient entertainment, roaming guest interaction, choreographed feature moments, or photo-friendly visual performance.
+          </p>
         </div>
-        <p class="lead">A strong fit for event planners, brands, venues, and private hosts looking for sophisticated spectacle without losing warmth or polish.</p>
-      </div>
 
-      <div class="event-list">
-        <article class="event-item">
-          <span>01</span>
-          <h3>Corporate galas</h3>
-          <p>Entrances, receptions, holiday parties, and awards nights.</p>
-        </article>
-        <article class="event-item">
-          <span>02</span>
-          <h3>Brand activations</h3>
-          <p>Launches, pop-ups, retail openings, and photo-driven experiences.</p>
-        </article>
-        <article class="event-item">
-          <span>03</span>
-          <h3>Weddings</h3>
-          <p>Statement arrivals, after-parties, outdoor fire moments, and surprise transitions.</p>
-        </article>
-        <article class="event-item">
-          <span>04</span>
-          <h3>Festivals</h3>
-          <p>Roaming ambience, interactive characters, and large-format visual energy.</p>
-        </article>
-      </div>
-    </section>
+        <div class="cards">
+          <article class="card">
+            <div class="mini">Stilt walking</div>
+            <h3>Stilt Walker For Nashville Events</h3>
+            <p>
+              Create a high-impact entrance, roaming photo moment, or interactive guest experience with a Nashville stilt walker. Sarah Grace offers elegant, playful, themed, and brand-aligned stilt walking for corporate events, galas, festivals, weddings, grand openings, holiday parties, and private celebrations.
+            </p>
+          </article>
 
-    <section class="section reveal">
-      <div class="quote">
-        <div class="section-label">Client note</div>
-        <blockquote>“She didn’t just perform — she changed the whole feeling of the event.”</blockquote>
-        <p>Sample testimonial placeholder. Replace this with a real client quote when available.</p>
+          <article class="card">
+            <div class="mini">Fire performance</div>
+            <h3>Fire Performer &amp; Fire Dancer In Nashville</h3>
+            <p>
+              Sarah Grace offers multi-prop fire performance for outdoor events, festivals, private parties, nightlife experiences, brand activations, and special celebrations. Fire acts can be designed as ambient entertainment, choreographed feature moments, or visually striking guest experiences.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="mini">LED performance</div>
+            <h3>LED Performer For Corporate Events &amp; Private Parties</h3>
+            <p>
+              LED performance brings the visual impact of movement, glow, and color to indoor venues, corporate events, brand activations, nightlife events, and celebrations where fire may not be possible.
+            </p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section cta reveal" id="inquire">
-      <div>
-        <div class="section-label">Inquire</div>
-        <h2>Tell Sarah what you’re creating.</h2>
-        <p>Share the date, venue, guest count, event style, and whether you’re interested in stilt walking, fire artistry, or a custom performance concept.</p>
-        <a class="button" href="mailto:sarah@radiantway.co?subject=Performance%20Inquiry&body=Hi%20Sarah%2C%0A%0AI%27d%20love%20to%20learn%20more%20about%20booking%20you%20for%20an%20event.%0A%0AEvent%20date%3A%0AVenue%3A%0AGuest%20count%3A%0AService%20interest%3A%0A%0AThank%20you!">Start an inquiry</a>
+    <section class="light section" id="events">
+      <div class="container">
+        <div class="location-band">
+          <div>
+            <div class="kicker-dark">Available for</div>
+            <h2>Corporate Events, Brand Activations &amp; Private Celebrations</h2>
+          </div>
+          <div class="location-pills" aria-label="Event types Sarah Grace Performance can serve">
+            <span>Corporate Events</span>
+            <span>Brand Activations</span>
+            <span>Galas &amp; Fundraisers</span>
+            <span>Festivals &amp; Fairs</span>
+            <span>Weddings &amp; Receptions</span>
+            <span>Private Parties</span>
+            <span>Holiday Parties</span>
+            <span>Grand Openings</span>
+            <span>Nightlife Events</span>
+            <span>VIP Receptions</span>
+            <span>Photo Moments</span>
+            <span>Immersive Experiences</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="light section compact" id="locations">
+      <div class="container">
+        <div class="section-intro">
+          <div>
+            <div class="kicker-dark">Nashville + Middle Tennessee</div>
+            <h2>Nashville + Middle Tennessee Event Entertainment</h2>
+          </div>
+          <p>
+            Sarah Grace Performance is based in Nashville and available for events throughout Middle Tennessee, including downtown Nashville, The Gulch, Music Row, East Nashville, Germantown, Franklin, Brentwood, Murfreesboro, and surrounding areas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="light section" id="gallery">
+      <div class="container">
+        <div class="section-intro">
+          <div>
+            <div class="kicker-dark">Gallery</div>
+            <h2>Performance Images For Fire, Stilts &amp; LED</h2>
+          </div>
+          <p>
+            A visual portfolio for Sarah’s stilt walking, fire performance, LED artistry, costuming, and event atmosphere.
+          </p>
+        </div>
+
+        <div class="gallery">
+          <!-- PHOTO TODO:
+            Replace placeholder with:
+            <img src="images/nashville-fire-performer-sarah-grace.jpg" alt="Nashville fire performer Sarah Grace with fire props at an outdoor event">
+          -->
+          <div class="photo-placeholder">
+            <div class="placeholder-inner">
+              <div class="placeholder-kicker">Gallery</div>
+              <div class="placeholder-title">Fire performance</div>
+              <p>Outdoor fire acts, ambient entertainment, and choreographed feature moments.</p>
+            </div>
+          </div>
+
+          <div class="gallery-stack">
+            <!-- PHOTO TODO:
+              <img src="images/sarah-grace-stilt-walker-nashville.jpg" alt="Sarah Grace performing as a stilt walker at a Nashville event">
+            -->
+            <div class="photo-placeholder">
+              <div class="placeholder-inner">
+                <div class="placeholder-kicker">Gallery</div>
+                <div class="placeholder-title">Stilt walking</div>
+                <p>Roaming entrances, guest interaction, themed costuming, and photo moments.</p>
+              </div>
+            </div>
+
+            <!-- PHOTO TODO:
+              <img src="images/led-performer-nashville-event.jpg" alt="LED performer for a Nashville corporate event or private party">
+            -->
+            <div class="photo-placeholder">
+              <div class="placeholder-inner">
+                <div class="placeholder-kicker">Gallery</div>
+                <div class="placeholder-title">LED performance</div>
+                <p>Glow, color, movement, and indoor visual impact for events where fire may not be possible.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="light section" id="planning">
+      <div class="container split">
+        <div class="card">
+          <div class="mini">Planning notes</div>
+          <h3>Fire performance is planned around the venue.</h3>
+          <p>
+            Fire performance depends on venue rules, safety space, weather, audience flow, and event logistics. Outdoor settings, festivals, private events, and nightlife experiences may be a strong fit when conditions allow.
+          </p>
+          <!-- If Sarah is insured, replace this note with a true trust sentence, for example:
+          <p>Sarah Grace Performance carries performer insurance and coordinates fire performance with venue safety requirements.</p>
+          -->
+        </div>
+
+        <div class="card">
+          <div class="mini">Custom acts</div>
+          <h3>Performance can be shaped around the event.</h3>
+          <p>
+            Costuming, colors, performance style, music, timing, and guest interaction can be adapted to support the event theme, brand identity, season, or atmosphere.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="light section" id="faq">
+      <div class="container">
+        <div class="section-intro">
+          <div>
+            <div class="kicker-dark">FAQ</div>
+            <h2>Questions people ask before booking.</h2>
+          </div>
+          <p>
+            A few common questions to help you choose the right performance style for your event.
+          </p>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>Do you offer stilt walking for corporate events in Nashville?</summary>
+            <p>Yes. Sarah Grace Performance offers stilt walking for corporate events, galas, brand activations, conferences, grand openings, holiday parties, and private celebrations in Nashville and surrounding areas.</p>
+          </details>
+
+          <details>
+            <summary>Can I book fire performance for a private event?</summary>
+            <p>Yes. Fire performance may be available for outdoor private events, festivals, nightlife events, and special celebrations depending on venue rules, safety space, weather, and event logistics.</p>
+          </details>
+
+          <details>
+            <summary>Do you offer indoor entertainment options?</summary>
+            <p>Yes. LED performance and stilt walking can be strong options for indoor venues, corporate events, parties, and brand activations where fire may not be permitted.</p>
+          </details>
+
+          <details>
+            <summary>Can performances be customized to a theme or brand?</summary>
+            <p>Yes. Costuming, colors, performance style, music, and guest interaction can be adapted to support the event theme, brand identity, season, or atmosphere.</p>
+          </details>
+
+          <details>
+            <summary>What types of events are a good fit?</summary>
+            <p>Sarah Grace Performance is a strong fit for corporate events, brand activations, galas, festivals, fairs, weddings, holiday parties, VIP receptions, grand openings, nightlife events, and immersive guest experiences.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="book">
+      <div class="container">
+        <div class="eyebrow" style="justify-content:center;">Booking inquiry</div>
+        <h2>Bring atmosphere, height, fire, light, and movement to your next Nashville event.</h2>
+        <p>
+          Share your event date, location, guest count, venue type, performance needs, and any theme or brand direction. Sarah can help shape the right stilt, fire, LED, or roaming entertainment experience.
+        </p>
+        <div class="hero-actions" style="justify-content:center;">
+          <!-- EDIT THIS EMAIL LINK when Sarah confirms her preferred booking email -->
+          <a class="button" href="mailto:hello@sarahgraceperformance.com?subject=Booking%20Inquiry%20for%20Sarah%20Grace%20Performance">Book Sarah Grace Performance</a>
+          <!-- Add Instagram link when Sarah confirms exact handle:
+          <a class="button secondary" href="https://www.instagram.com/EXACT_HANDLE/" target="_blank" rel="noopener">View Instagram</a>
+          -->
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <span>Sarah Grace Performance © 2026</span>
-    <span>Nashville, Tennessee · Available for select travel</span>
+  <footer>
+    <div class="container footer-inner">
+      <div>© Sarah Grace Performance. Nashville stilt walking, fire performance &amp; LED artistry.</div>
+      <div><a href="#top">Back to top</a></div>
+    </div>
   </footer>
-
-  <script>
-    const revealItems = document.querySelectorAll(".reveal");
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.16 });
-
-    revealItems.forEach((item) => observer.observe(item));
-  </script>
 </body>
 </html>
