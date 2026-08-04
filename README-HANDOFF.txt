@@ -1,15 +1,22 @@
-SARAH GRACE PERFORMANCE — GITHUB READY
+SARAH GRACE PERFORMANCE — FINAL RETINA WEB PACKAGE
 
-IMPORTANT: Keep ALL of these files together in the root of the GitHub repository.
-Do not upload index.html by itself.
+Built from the original full-resolution photo files and original 1280x720 Resolve reel.
 
-Files:
-- index.html
-- sarah-grace-performance-nashville-stilt-walker.webp
-- sarah-grace-performance-nashville-performer.webp
-- sarah-grace-stilt-walker-event-performance-nashville.webp
-- sarah-grace-performance-nashville-demo-reel-poster.jpg
-- sarah-grace-performance-nashville-demo-reel.mp4
+UPLOAD TO GITHUB:
+1. Upload the individual files in this folder (not the ZIP itself).
+2. Replace the existing index.html and media files with these versions.
+3. Commit the changes and wait for the GitHub Pages green check.
 
-To preview locally: unzip the folder, then double-click index.html.
-To publish: upload all files to the same level in the GitHub repo.
+IMAGE PREPARATION:
+- Pink hero: 1600 x 2000 WebP, high-quality Retina web export
+- Nashville red/white image: 1320 x 1999 WebP, high-quality Retina web export
+- Orange fan image: 1800 x 1200 WebP, high-quality Retina web export
+- No AI enhancement, sharpening, or generated detail was used.
+
+VIDEO:
+- Native 1280 x 720 / 23.976 fps preserved
+- H.264 + AAC, web fast-start enabled
+- Approx. 22 MB so it remains below GitHub browser upload limits
+- No AI upscaling or frame interpolation
+
+Keep the untouched original JPEG/MOV files archived separately as masters.
