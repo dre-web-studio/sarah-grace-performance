@@ -6,24 +6,26 @@
     How to use:
     1) Rename this file to index.html
     2) Upload/replace the current index.html in the GitHub repo
-    3) Later, upload photos into an images/ folder and replace the placeholder blocks
+    3) Keep all files in this folder together when uploading to GitHub Pages
   -->
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nashville Stilt Walker, Fire Performer & LED Artist | Sarah Grace Performance</title>
-  <meta name="description" content="Sarah Grace Performance is a Nashville-based stilt walker, fire performer, and LED artist available for corporate events, galas, brand activations, festivals, weddings, private parties, and luxury celebrations.">
+  <title>Nashville Stilt Walker & Fire Performer | Sarah Grace Performance</title>
+  <meta name="description" content="Sarah Grace Performance is a Nashville-based stilt walker and fire performer available for corporate events, brand activations, festivals, weddings, private parties, and regional travel, with LED and specialty visual performance also available.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://sarahgraceperformance.com/">
 
   <!-- Social preview -->
-  <meta property="og:title" content="Nashville Stilt Walker, Fire Performer & LED Artist | Sarah Grace Performance">
-  <meta property="og:description" content="High-impact stilt walking, fire, and LED performance for Nashville events that need atmosphere, movement, and unforgettable visual presence.">
+  <meta property="og:title" content="Nashville Stilt Walker & Fire Performer | Sarah Grace Performance">
+  <meta property="og:description" content="High-impact stilt walking and fire performance for Nashville events and regional bookings, with specialty visual entertainment tailored to each event.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sarahgraceperformance.com/">
-  <!-- Later, when you upload a strong horizontal image, uncomment and edit this:
-  <meta property="og:image" content="https://sarahgraceperformance.com/images/sarah-grace-performance-nashville.jpg">
-  -->
+  <meta property="og:image" content="https://sarahgraceperformance.com/sarah-grace-performance-nashville-performer.webp">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="1066">
+  <meta property="og:image:alt" content="Sarah Grace performing on stilts with flowing orange fans">
+  <meta name="twitter:card" content="summary_large_image">
 
   <style>
     :root {
@@ -67,6 +69,72 @@
       width: 100%;
       display: block;
       border-radius: 24px;
+    }
+
+    video {
+      width: 100%;
+      display: block;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      min-height: 640px;
+      object-fit: cover;
+      object-position: center 34%;
+      border-radius: 0;
+    }
+
+    .gallery-media {
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      object-fit: cover;
+      border-radius: 28px;
+      box-shadow: 0 20px 52px rgba(50, 40, 33, .08);
+    }
+
+    .gallery-feature {
+      min-height: 658px;
+    }
+
+    .gallery-portrait {
+      min-height: 320px;
+      max-height: 420px;
+      object-position: center 35%;
+    }
+
+    .reel-card {
+      overflow: hidden;
+      border-radius: 28px;
+      background: #181411;
+      box-shadow: 0 20px 52px rgba(50, 40, 33, .10);
+      border: 1px solid rgba(50, 40, 33, .10);
+    }
+
+    .reel-card video {
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: #0e0d0c;
+    }
+
+    .media-caption {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 14px 16px 15px;
+      color: var(--cream);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.05rem;
+    }
+
+    .media-caption span {
+      color: rgba(248, 242, 232, .62);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: .74rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
     }
 
     .container {
@@ -546,6 +614,14 @@
         min-height: 460px;
       }
 
+      .hero-image {
+        min-height: 460px;
+      }
+
+      .gallery-feature {
+        min-height: 420px;
+      }
+
       .cards {
         grid-template-columns: 1fr;
       }
@@ -602,18 +678,20 @@
     "@type": "EntertainmentBusiness",
     "name": "Sarah Grace Performance",
     "url": "https://sarahgraceperformance.com/",
-    "description": "Nashville-based stilt walking, fire performance, LED artistry, roaming entertainment, and custom visual performance for corporate events, brand activations, festivals, weddings, private parties, galas, and luxury celebrations.",
+    "image": "https://sarahgraceperformance.com/sarah-grace-performance-nashville-performer.webp",
+    "description": "Nashville-based stilt walking and fire performance for corporate events, brand activations, festivals, weddings, private parties, galas, and regional travel, with LED and specialty visual performance also available.",
     "areaServed": [
       "Nashville, TN",
       "Middle Tennessee",
-      "Franklin, TN",
-      "Brentwood, TN",
-      "Murfreesboro, TN"
+      "Tennessee",
+      "Owensboro, KY",
+      "Indianapolis, IN",
+      "Regional travel"
     ],
     "founder": {
       "@type": "Person",
       "name": "Sarah Grace",
-      "jobTitle": "Stilt Walker, Fire Performer, and LED Artist"
+      "jobTitle": "Stilt Walker and Fire Performer"
     },
     "makesOffer": [
       {
@@ -661,9 +739,9 @@
       <div class="container hero-grid">
         <div>
           <div class="eyebrow">Nashville specialty performance</div>
-          <h1>Nashville Stilt Walker, Fire Performer &amp; LED Artist</h1>
+          <h1>Nashville Stilt Walker &amp; Fire Performer</h1>
           <p class="hero-copy">
-            Sarah Grace Performance provides stilt walking, fire performance, LED artistry, roaming entertainment, and custom visual acts for corporate events, brand activations, galas, festivals, weddings, private parties, and luxury celebrations in Nashville and beyond.
+            Sarah Grace Performance specializes in stilt walking and fire performance for corporate events, brand activations, galas, festivals, weddings, private parties, and special celebrations. Based in Nashville and available for regional travel, Sarah also offers LED and other specialty visual performance options when they fit the event.
           </p>
 
           <div class="quick-tags" aria-label="Popular booking categories">
@@ -676,24 +754,21 @@
 
           <div class="hero-actions">
             <!-- EDIT THIS EMAIL LINK when Sarah confirms her preferred booking email -->
-            <a class="button" href="mailto:hello@sarahgraceperformance.com?subject=Booking%20Inquiry%20for%20Sarah%20Grace%20Performance">Book Sarah Grace</a>
+            <a class="button" href="mailto:smurray0923@gmail.com?subject=Booking%20Inquiry%20for%20Sarah%20Grace%20Performance">Book Sarah Grace</a>
             <a class="button secondary" href="#services">Explore Services</a>
           </div>
-          <p class="edit-note">Available for Nashville, Middle Tennessee, and travel-based event bookings.</p>
+          <p class="edit-note">Based in Nashville. Available throughout Middle Tennessee and for regional travel, including bookings in Kentucky and Indiana.</p>
         </div>
 
-        <div class="hero-card" aria-label="Featured Sarah Grace Performance image placeholder">
-          <!-- PHOTO TODO:
-            When Sarah gives you a hero photo, replace this whole .photo-placeholder div with:
-            <img src="images/sarah-grace-stilt-walker-nashville.jpg" alt="Sarah Grace performing as a stilt walker at a Nashville event">
-          -->
-          <div class="photo-placeholder">
-            <div class="placeholder-inner">
-              <div class="placeholder-kicker">Featured image</div>
-              <div class="placeholder-title">Stilts, fire &amp; LED</div>
-              <p>A featured Sarah Grace Performance image can live here once final photos are selected.</p>
-            </div>
-          </div>
+        <div class="hero-card">
+          <img
+            class="hero-image"
+            src="sarah-grace-performance-nashville-stilt-walker.webp"
+            alt="Sarah Grace in a pink stilt-walking costume with feather fans"
+            width="1280"
+            height="1600"
+            fetchpriority="high"
+            decoding="async">
         </div>
       </div>
     </header>
@@ -704,7 +779,7 @@
           <div class="eyebrow">Direct booking</div>
           <h2>Book a Nashville specialty performer directly.</h2>
           <p>
-            Sarah Grace is a Nashville-based stilt walker and multi-prop fire and LED performer. Instead of booking through a large entertainment roster, clients work directly with Sarah to shape the performance around the event theme, venue, audience, timing, and guest experience.
+            Sarah Grace is a Nashville-based stilt walker and multi-prop fire performer who also offers LED and specialty visual performance. Direct booking gives clients an easy way to coordinate performance style, costuming, venue needs, timing, and guest experience directly with Sarah, while she also works comfortably alongside event planners, agencies, and entertainment teams.
           </p>
           <p>
             High-impact stilt walking, fire, and LED performance for Nashville events that need atmosphere, movement, and unforgettable visual presence.
@@ -798,11 +873,11 @@
       <div class="container">
         <div class="section-intro">
           <div>
-            <div class="kicker-dark">Nashville + Middle Tennessee</div>
-            <h2>Nashville + Middle Tennessee Event Entertainment</h2>
+            <div class="kicker-dark">Nashville based + available to travel</div>
+            <h2>Nashville Event Entertainment With Regional Availability</h2>
           </div>
           <p>
-            Sarah Grace Performance is based in Nashville and available for events throughout Middle Tennessee, including downtown Nashville, The Gulch, Music Row, East Nashville, Germantown, Franklin, Brentwood, Murfreesboro, and surrounding areas.
+            Sarah Grace Performance is based in Nashville and available for events throughout Middle Tennessee and beyond. Local bookings include Nashville, Franklin, Brentwood, Murfreesboro, and surrounding areas, with regional travel for events in markets such as Owensboro, Kentucky and Indianapolis, Indiana.
           </p>
         </div>
       </div>
@@ -821,38 +896,38 @@
         </div>
 
         <div class="gallery">
-          <!-- PHOTO TODO:
-            Replace placeholder with:
-            <img src="images/nashville-fire-performer-sarah-grace.jpg" alt="Nashville fire performer Sarah Grace with fire props at an outdoor event">
-          -->
-          <div class="photo-placeholder">
-            <div class="placeholder-inner">
-              <div class="placeholder-kicker">Gallery</div>
-              <div class="placeholder-title">Fire performance</div>
-              <p>Outdoor fire acts, ambient entertainment, and choreographed feature moments.</p>
-            </div>
-          </div>
+          <img
+            class="gallery-media gallery-feature"
+            src="sarah-grace-performance-nashville-performer.webp"
+            alt="Sarah Grace performing on stilts with flowing orange fans by the ocean"
+            width="1600"
+            height="1066"
+            loading="lazy"
+            decoding="async">
 
           <div class="gallery-stack">
-            <!-- PHOTO TODO:
-              <img src="images/sarah-grace-stilt-walker-nashville.jpg" alt="Sarah Grace performing as a stilt walker at a Nashville event">
-            -->
-            <div class="photo-placeholder">
-              <div class="placeholder-inner">
-                <div class="placeholder-kicker">Gallery</div>
-                <div class="placeholder-title">Stilt walking</div>
-                <p>Roaming entrances, guest interaction, themed costuming, and photo moments.</p>
-              </div>
-            </div>
+            <img
+              class="gallery-media gallery-portrait"
+              src="sarah-grace-stilt-walker-event-performance-nashville.webp"
+              alt="Sarah Grace stilt walking outside Acme Feed and Seed in downtown Nashville"
+              width="1056"
+              height="1600"
+              loading="lazy"
+              decoding="async">
 
-            <!-- PHOTO TODO:
-              <img src="images/led-performer-nashville-event.jpg" alt="LED performer for a Nashville corporate event or private party">
-            -->
-            <div class="photo-placeholder">
-              <div class="placeholder-inner">
-                <div class="placeholder-kicker">Gallery</div>
-                <div class="placeholder-title">LED performance</div>
-                <p>Glow, color, movement, and indoor visual impact for events where fire may not be possible.</p>
+            <div class="reel-card">
+              <video
+                controls
+                playsinline
+                preload="metadata"
+                poster="sarah-grace-performance-nashville-demo-reel-poster.jpg"
+                aria-label="Sarah Grace Performance demo reel">
+                <source src="sarah-grace-performance-nashville-demo-reel.mp4" type="video/mp4">
+                Your browser does not support embedded video.
+              </video>
+              <div class="media-caption">
+                <strong>Performance reel</strong>
+                <span>Fire · LED · specialty performance</span>
               </div>
             </div>
           </div>
@@ -868,9 +943,7 @@
           <p>
             Fire performance depends on venue rules, safety space, weather, audience flow, and event logistics. Outdoor settings, festivals, private events, and nightlife experiences may be a strong fit when conditions allow.
           </p>
-          <!-- If Sarah is insured, replace this note with a true trust sentence, for example:
-          <p>Sarah Grace Performance carries performer insurance and coordinates fire performance with venue safety requirements.</p>
-          -->
+          <p style="margin-top:14px;">Sarah Grace Performance is insured and coordinates fire performance with venue safety requirements, event logistics, and appropriate safety considerations.</p>
         </div>
 
         <div class="card">
@@ -933,7 +1006,7 @@
         </p>
         <div class="hero-actions" style="justify-content:center;">
           <!-- EDIT THIS EMAIL LINK when Sarah confirms her preferred booking email -->
-          <a class="button" href="mailto:hello@sarahgraceperformance.com?subject=Booking%20Inquiry%20for%20Sarah%20Grace%20Performance">Book Sarah Grace Performance</a>
+          <a class="button" href="mailto:smurray0923@gmail.com?subject=Booking%20Inquiry%20for%20Sarah%20Grace%20Performance">Book Sarah Grace Performance</a>
           <!-- Add Instagram link when Sarah confirms exact handle:
           <a class="button secondary" href="https://www.instagram.com/EXACT_HANDLE/" target="_blank" rel="noopener">View Instagram</a>
           -->
@@ -944,9 +1017,10 @@
 
   <footer>
     <div class="container footer-inner">
-      <div>© Sarah Grace Performance. Nashville stilt walking, fire performance &amp; LED artistry.</div>
+      <div>© Sarah Grace Performance. Nashville stilt walking, fire performance &amp; specialty entertainment.</div>
       <div><a href="#top">Back to top</a></div>
     </div>
   </footer>
+  <!-- Site assets are self-contained in the same folder as index.html for easy GitHub ownership transfer. -->
 </body>
 </html>
