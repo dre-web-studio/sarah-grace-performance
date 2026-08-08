@@ -106,11 +106,39 @@
       object-position: center 85%;
     }
 
-    .gallery-portrait {
-      height: 250px;
-      min-height: 250px;
-      max-height: 250px;
-      object-position: center 35%;
+    .gallery-figure {
+      margin: 0;
+      min-width: 0;
+    }
+
+    .gallery-pink-figure {
+      width: min(100%, 390px);
+      justify-self: center;
+    }
+
+    .gallery-pink-image {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 28px;
+      box-shadow: 0 20px 52px rgba(50, 40, 33, .08);
+    }
+
+    .photo-credit {
+      margin: 10px 4px 0;
+      color: #78695e;
+      font-size: .72rem;
+      line-height: 1.45;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      text-align: right;
+    }
+
+    .gallery-reel {
+      grid-column: 1 / -1;
+      width: min(100%, 820px);
+      justify-self: center;
+      margin-top: 10px;
     }
 
     .reel-card {
@@ -538,8 +566,8 @@
 
     .gallery {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, .78fr);
-      gap: 18px;
+      grid-template-columns: minmax(0, 1fr) minmax(330px, .76fr);
+      gap: 22px;
       align-items: start;
       max-width: 1040px;
       margin: 0 auto;
@@ -665,10 +693,13 @@
         min-height: 420px;
       }
 
-      .gallery-portrait {
-        height: 280px;
-        min-height: 280px;
-        max-height: 280px;
+      .gallery-pink-figure {
+        width: min(100%, 430px);
+      }
+
+      .gallery-reel {
+        width: min(100%, 820px);
+        margin-top: 4px;
       }
 
       .cards {
@@ -950,39 +981,42 @@
         </div>
 
         <div class="gallery">
-          <img
-            class="gallery-media gallery-feature"
-            src="sarah-grace-stilt-walker-event-performance-nashville.webp"
-            alt="Sarah Grace stilt walking outside Acme Feed and Seed in downtown Nashville"
-            width="1320"
-            height="1999"
-            loading="lazy"
-            decoding="async">
-
-          <div class="gallery-stack">
+          <figure class="gallery-figure">
             <img
-              class="gallery-media gallery-portrait"
-              src="sarah-grace-pink-fan-stilt-performance.webp"
-              alt="Sarah Grace performing on stilts with pink and white fans in a custom botanical costume"
-              width="1800"
-              height="1200"
+              class="gallery-media gallery-feature"
+              src="sarah-grace-stilt-walker-event-performance-nashville.webp"
+              alt="Sarah Grace stilt walking outside Acme Feed and Seed in downtown Nashville"
+              width="1320"
+              height="1999"
               loading="lazy"
               decoding="async">
+          </figure>
 
-            <div class="reel-card">
-              <video
-                controls
-                playsinline
-                preload="metadata"
-                poster="sarah-grace-performance-nashville-demo-reel-poster.jpg"
-                aria-label="Sarah Grace Performance demo reel">
-                <source src="sarah-grace-performance-nashville-demo-reel.mp4" type="video/mp4">
-                Your browser does not support embedded video.
-              </video>
-              <div class="media-caption">
-                <strong>Performance reel</strong>
-                <span>Fire · Specialty performance</span>
-              </div>
+          <figure class="gallery-figure gallery-pink-figure">
+            <img
+              class="gallery-pink-image"
+              src="sarah-grace-pink-fan-stilt-performance.webp"
+              alt="Sarah Grace performing on stilts with pink and white fans in a custom botanical costume"
+              width="1362"
+              height="2048"
+              loading="lazy"
+              decoding="async">
+            <figcaption class="photo-credit">Costume by Suspended Gravity Circus</figcaption>
+          </figure>
+
+          <div class="reel-card gallery-reel">
+            <video
+              controls
+              playsinline
+              preload="metadata"
+              poster="sarah-grace-performance-nashville-demo-reel-poster.jpg"
+              aria-label="Sarah Grace Performance demo reel">
+              <source src="sarah-grace-performance-nashville-demo-reel.mp4" type="video/mp4">
+              Your browser does not support embedded video.
+            </video>
+            <div class="media-caption">
+              <strong>Performance reel</strong>
+              <span>Fire · Specialty performance</span>
             </div>
           </div>
         </div>
